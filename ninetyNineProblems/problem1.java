@@ -30,6 +30,7 @@ public class problem1 {
 
         System.out.println(last1(l1));
         System.out.println(last2(l2));
+        System.out.println(lastRecursive(l1));
     }
 
     private static <T> T last1 (List<T> list) {
@@ -49,5 +50,15 @@ public class problem1 {
         }
 
         return linkedList.getLast();
+    }
+
+    //运用递归来找出最后一个元素
+    private static <T> T lastRecursive (List<T> list) {
+
+        if (list.size() == 1) {
+            return list.get(0);
+        }
+
+        return lastRecursive(list.subList(1, list.size()));
     }
 }
