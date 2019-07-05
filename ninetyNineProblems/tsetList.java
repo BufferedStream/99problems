@@ -28,6 +28,10 @@ public class tsetList {
         //返回列表中指定的 fromIndex（包括 ）和 toIndex（不包括）之间的部分视图。
 
         System.out.println(list.subList(1,3)); //[s1,s1,null]
+
+        System.out.println("a".compareTo("b")); //-1
+
+        System.out.println();
     }
 
 }
