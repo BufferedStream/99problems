@@ -19,6 +19,7 @@ public class problem2 {
 
         System.out.println(seconDlast(numbers1));
 
+        System.out.println(secondLastRecursion(numbers2));
     }
 
     private static <T> T seconDlast (List<T> list) {
@@ -42,7 +43,7 @@ public class problem2 {
             return linkedList.getFirst();
         }
 
-        return secondLastRecursion((LinkedList<T>) linkedList.subList(1, linkedList.size()));
+        return secondLastRecursion(new LinkedList<>(linkedList.subList(1, linkedList.size())));
     }
 
 }
