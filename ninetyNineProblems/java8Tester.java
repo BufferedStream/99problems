@@ -29,7 +29,7 @@ public class java8Tester {
         System.out.println(names2); //java.util.Arrays$ArrayList
     }
 
-    // 使用 java 7 排序
+    // 使用 java 7 排序，传递的是对象(new的匿名类)
     private static void sortUsingJava7(List<String> names){
         Collections.sort(names, new Comparator<String>() {
             @Override
@@ -40,7 +40,7 @@ public class java8Tester {
         });
     }
 
-    // 使用 java 8 排序
+    // 使用 java 8 排序，编译器自动识别类型(这哪个接口都不知道，也能调用吗？)
     private static void sortUsingJava8(List<String> names){
         Collections.sort(names, (s1, s2) -> s1.compareTo(s2));
     }
